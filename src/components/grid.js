@@ -4,7 +4,7 @@ import './grid.css';
 const MainMenu = ({ onStart }) => (
   <div className="main-menu">
     <div className="center-content">
-      <h1 className="main-title">Welcome to BEAT-hoven!</h1>
+      <h1 className="main-title">Welcome to BEAT-haven!</h1>
       <p className="subtitle">A place where different music cultures come together</p>
       <button className="start-button" onClick={onStart}>
         Start Creating
