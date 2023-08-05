@@ -2,6 +2,10 @@ import React, { useRef } from "react";
 import './pad.css';
 
 const Pad = ({ onClick, active, instrumentName, soundUrl }) => {
+  const element = Pad.current;
+
+  element.addEventListener("timerFired", alert());
+  
   const audioRef = useRef(null);
 
   const handleButtonClick = () => {
