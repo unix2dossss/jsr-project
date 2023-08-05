@@ -1,0 +1,43 @@
+  a {
+    text-decoration: none;
+    color: #108dff;
+  }
+  button {
+    margin: 20px;
+  }
+  .button-one {
+    background: linear-gradient(-45deg, #833ab4, #fd1d1d, #fcb045);
+  }
+  
+  .btn {
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+    background-size: 400% 400%;
+    color: #fff;
+    text-transform: uppercase;
+    border: 0;
+    padding: 100px;
+    font-size: 15px;
+    animation: Gradient 10s ease infinite;
+  
+    &:hover {
+      background-size: 150% 150%;
+    }
+  }
+  
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
