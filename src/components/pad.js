@@ -1,30 +1,29 @@
-import React, { useRef } from "react";
+import React, { Component, useRef } from "react";
 import './pad.css';
+import { useEffect } from "react";
 
-const Pad = ({ onClick, active, instrumentName, soundUrl }) => {
-  const element = Pad.current;
+class Pad extends React.Component {
+  handleTimerFired() {
+    alert("timer fired!");
+  }
 
-  element.addEventListener("timerFired", alert());
-  
-  const audioRef = useRef(null);
 
-  const handleButtonClick = () => {
-    onClick();
-    if (audioRef.current) {
-      audioRef.current.play();
-    }
-  };
 
+  constructor (){
+    super();
+    element = Pad.current;
+    element.addEventListener("timerFired", alert);
+  }
+
+  render(){
   return (
     <div>
       <div>
-        <button className={`btn button-gradient button-one ${active ? "active" : ""}`} onClick={handleButtonClick}>
-          {instrumentName}
-        </button>
-        <audio ref={audioRef} src={soundUrl} />
+        <button className={'btn button-gradient button-one'}/>
       </div>
     </div>
   );
+  }
 };
 
 export default Pad;
